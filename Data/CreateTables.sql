@@ -9,7 +9,14 @@
 -- ALTER ROLE db_owner ADD MEMBER NandaSurendra;
 
 
-
+if object_id('GamePrediction') is not null 
+    drop table GamePrediction;
+if object_id('WeeklyPredictionResults') is not null 
+    drop table WeeklyPredictionResults;
+if object_id('AppUser') is not null 
+    drop table AppUser;
+if object_id('Coach') is not null 
+    drop table Coach;
 if object_id('PunterStats') is not null 
     drop table PunterStats;
 if object_id('KickerStats') is not null 
@@ -24,12 +31,10 @@ if object_id('QBStats') is not null
     drop table QBStats;
 if object_id('PlayerStats') is not null 
     drop table PlayerStats;
-if object_id('RosterPlayer') is not null 
-    drop table RosterPlayer;
 if object_id('Roster') is not null 
     drop table Roster;
-if object_id('PlayerPosition') is not null 
-    drop table PlayerPosition;
+if object_id('Position') is not null
+    drop table Position;
 if object_id('Player') is not null 
     drop table Player;
 if object_id('Game') is not null
@@ -38,8 +43,8 @@ if object_id('Team') is not null
     drop table Team;
 if object_id('Stadium') is not null
     drop table Stadium;
-
-
+if object_id('AppUser') is not null
+    drop table AppUser;
 
 go 
 
@@ -230,3 +235,61 @@ CREATE table PunterStats (
     constraint FK_PunterStats_PlayerStats FOREIGN KEY (PunterStatsID) REFERENCES PlayerStats(PlayerStatsID),
     constraint CK_PunterStats CHECK (Punts >= 0 AND Yards >= 0 AND Long >= 0)
 );
+
+CREATE table Coach (
+    CoachID INT NOT NULL IDENTITY(1,1),
+    CoachName VARCHAR(100) NOT NULL,
+    constraint PK_Coach PRIMARY KEY (CoachID),
+    constraint UQ_Coach UNIQUE (CoachName)
+);
+
+go 
+
+CREATE table AppUser (
+    AppUserID INT NOT NULL IDENTITY(1,1),
+    FirstName VARCHAR(50) NOT NULL,
+    LastName VARCHAR(50) NOT NULL,
+    Email VARCHAR(100) NOT NULL,
+    -- store a hash, never the plain password
+    PasswordHash VARCHAR(255) NOT NULL,  
+    constraint PK_AppUser PRIMARY KEY (AppUserID),
+    constraint UQ_AppUser_Email UNIQUE (Email)
+);
+
+go 
+
+CREATE table WeeklyPredictionResults(
+    WPRID INT NOT NULL IDENTITY(1,1),
+    StartDate DATE NOT NULL,
+    NumberOfCorrectPredictions INT NULL,
+    constraint PK_WeeklyPredictionResults PRIMARY KEY (WPRID),
+    constraint UQ_WeeklyPredictionResults UNIQUE (StartDate),
+    constraint CK_WPR_Correct CHECK (NumberOfCorrectPredictions IS NULL OR NumberOfCorrectPredictions >= 0)
+);
+
+go 
+
+CREATE table GamePrediction(
+    GamePredictionID INT NOT NULL IDENTITY(1,1),
+    PredictionDateTime DATETIME2 NOT NULL DEFAULT SYSDATETIME(),
+    AppUserID INT NOT NULL,
+    GameID INT NOT NULL,
+    -- the team the user predicts will win
+    WinningPTeamID INT NOT NULL,       
+    WPRID INT NOT NULL,
+    constraint PK_GamePrediction PRIMARY KEY (GamePredictionID),
+    constraint UQ_GamePrediction UNIQUE (AppUserID, GameID),
+    constraint FK_GamePrediction_AppUser FOREIGN KEY (AppUserID) REFERENCES AppUser(AppUserID),
+    constraint FK_GamePrediction_Game FOREIGN KEY (GameID) REFERENCES Game(GameID),
+    constraint FK_GamePrediction_WinningPTeam FOREIGN KEY (WinningPTeamID) REFERENCES Team(TeamID),
+    constraint FK_GamePrediction_WPR FOREIGN KEY (WPRID) REFERENCES WeeklyPredictionResults(WPRID)
+);
+
+
+
+
+
+
+
+
+
