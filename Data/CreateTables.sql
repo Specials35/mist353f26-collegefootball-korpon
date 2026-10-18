@@ -13,25 +13,27 @@ if object_id('GamePrediction') is not null
     drop table GamePrediction;
 if object_id('WeeklyPredictionResults') is not null 
     drop table WeeklyPredictionResults;
+if object_id('AppUserTeam') is not null 
+    drop table AppUserTeam;
 if object_id('AppUser') is not null 
     drop table AppUser;
 if object_id('CoachTeam') is not null 
     drop table CoachTeam;
-if object_id('Coach') is not null 
+if object_id('Coach', 'U') is not null 
     drop table Coach;
-if object_id('PunterStats') is not null 
+if object_id('PunterStats', 'U') is not null 
     drop table PunterStats;
-if object_id('KickerStats') is not null 
+if object_id('KickerStats', 'U') is not null 
     drop table KickerStats;
-if object_id('ReturnerStats') is not null 
+if object_id('ReturnerStats', 'U') is not null 
     drop table ReturnerStats;
-if object_id('DefenderStats') is not null 
+if object_id('DefenderStats' , 'U') is not null 
     drop table DefenderStats;
-if object_id('RBStats') is not null 
+if object_id('RBStats', 'U') is not null 
     drop table RBStats;
-if object_id('QBStats') is not null 
+if object_id('QBStats', 'U') is not null 
     drop table QBStats;
-if object_id('PlayerStats') is not null 
+if object_id('PlayerStats', 'U') is not null 
     drop table PlayerStats;
 if object_id('RosterPlayer') is not null 
     drop table RosterPlayer;
@@ -190,29 +192,29 @@ go
 
 CREATE table QBStats (
     QBStatsID INT NOT NULL,
-    Attempts INT NOT NULL DEFAULT 0,
-    Completions INT NOT NULL DEFAULT 0,
-    Yards INT NOT NULL DEFAULT 0,
-    TDs INT NOT NULL DEFAULT 0,
-    INTs INT NOT NULL DEFAULT 0,
+    PassingAttempts INT NOT NULL DEFAULT 0,
+    PassingCompletions INT NOT NULL DEFAULT 0,
+    PassingYards INT NOT NULL DEFAULT 0,
+    PassingTouchDowns INT NOT NULL DEFAULT 0,
+    Interceptions INT NOT NULL DEFAULT 0,
     constraint PK_QBStats PRIMARY KEY (QBStatsID),
     constraint FK_QBStats_PlayerStats FOREIGN KEY (QBStatsID) REFERENCES PlayerStats(PlayerStatsID),
-    constraint CK_QBStats CHECK (Attempts >= 0 AND Completions >= 0
-        AND Completions <= Attempts AND TDs >= 0 AND INTs >= 0)
+    constraint CK_QBStats CHECK (PassingAttempts >= 0 AND PassingCompletions >= 0
+        AND PassingCompletions <= PassingAttempts AND PassingTouchdowns >= 0 AND Interceptions >= 0)
 );
 
 go 
 
 create table RBStats (
     RBStatsID INT NOT NULL,
-    Carries INT NOT NULL DEFAULT 0,
-    Yards INT NOT NULL DEFAULT 0,
-    TDs INT NOT NULL DEFAULT 0,
-    Long INT NOT NULL DEFAULT 0,
+    RushingAttempts INT NOT NULL DEFAULT 0,
+    RushingYards INT NOT NULL DEFAULT 0,
+    RushingTDs INT NOT NULL DEFAULT 0,
+    LongestRush INT NOT NULL DEFAULT 0,
     Fumbles INT NOT NULL DEFAULT 0,
     constraint PK_RBStats PRIMARY KEY (RBStatsID),
     constraint FK_RBStats_PlayerStats FOREIGN KEY (RBStatsID) REFERENCES PlayerStats(PlayerStatsID),
-    constraint CK_RBStats CHECK (Carries >= 0 AND TDs >= 0 AND Fumbles >= 0)
+    constraint CK_RBStats CHECK (RushingAttempts >= 0 AND RushingTDs >= 0 AND Fumbles >= 0)
 );
 
 go
@@ -223,6 +225,7 @@ create table DefenderStats (
     -- half sack is possible, so decimal(4,1) is used
     Sacks DECIMAL(4,1) NOT NULL DEFAULT 0, 
     Interceptions INT NOT NULL DEFAULT 0,
+    ForcedFumbles INT NOT NULL DEFAULT 0,
     DefensiveTDs INT NOT NULL DEFAULT 0,
     constraint PK_DefenderStats PRIMARY KEY (DefenderStatsID),
     constraint FK_DefenderStats_PlayerStats FOREIGN KEY (DefenderStatsID) REFERENCES PlayerStats(PlayerStatsID),
@@ -234,18 +237,18 @@ go
 
 CREATE table ReturnerStats (
     ReturnerStatsID INT NOT NULL,
-    KickOffAttempts INT NOT NULL DEFAULT 0,
-    KickOffYards INT NOT NULL DEFAULT 0,
-    KickOffLong INT NOT NULL DEFAULT 0,
-    KickOffTDs INT NOT NULL DEFAULT 0,
-    PuntReturnAttempts INT NOT NULL DEFAULT 0,
-    PuntReturnYards INT NOT NULL DEFAULT 0,
-    PuntReturnLong INT NOT NULL DEFAULT 0,
-    PuntReturnTDs INT NOT NULL DEFAULT 0,
+    KickReturns int not null default 0,
+    KickReturnYards int not null default 0,
+    KickReturnLong int not null default 0,
+    KickReturnTouchdowns int not null default 0,
+    PuntReturns int not null default 0,
+    PuntReturnYards int not null default 0,
+    PuntReturnTouchdowns int not null default 0,
+    PuntReturnLong int not null default 0,
     constraint PK_ReturnerStats PRIMARY KEY (ReturnerStatsID),
     constraint FK_ReturnerStats_PlayerStats FOREIGN KEY (ReturnerStatsID) REFERENCES PlayerStats(PlayerStatsID),
-    constraint CK_ReturnerStats CHECK (KickOffAttempts >= 0 AND KickOffTDs >= 0
-        AND PuntReturnAttempts >= 0 AND PuntReturnTDs >= 0)
+    constraint CK_ReturnerStats CHECK (KickReturns >= 0 AND KickReturnTouchdowns >= 0
+        AND PuntReturns >= 0 AND PuntReturnTouchdowns >= 0)
 );
 
 go 
@@ -269,11 +272,11 @@ go
 CREATE table PunterStats (
     PunterStatsID INT NOT NULL,
     Punts INT NOT NULL DEFAULT 0,
-    Yards INT NOT NULL DEFAULT 0,
-    Long INT NOT NULL DEFAULT 0,
+    PuntYards INT NOT NULL DEFAULT 0,
+    LongestPunt INT NOT NULL DEFAULT 0,
     constraint PK_PunterStats PRIMARY KEY (PunterStatsID),
     constraint FK_PunterStats_PlayerStats FOREIGN KEY (PunterStatsID) REFERENCES PlayerStats(PlayerStatsID),
-    constraint CK_PunterStats CHECK (Punts >= 0 AND Yards >= 0 AND Long >= 0)
+    constraint CK_PunterStats CHECK (Punts >= 0 AND PuntYards >= 0 AND LongestPunt >= 0)
 );
 
 
@@ -301,7 +304,7 @@ CREATE table CoachTeam (
     constraint CK_CoachTeam_Years CHECK (EndYear IS NULL OR EndYear >= StartYear)
 );
 
-go
+go 
 
 CREATE table AppUser (
     AppUserID INT NOT NULL IDENTITY(1,1),
@@ -312,6 +315,18 @@ CREATE table AppUser (
     PasswordHash VARCHAR(255) NOT NULL,  
     constraint PK_AppUser PRIMARY KEY (AppUserID),
     constraint UQ_AppUser_Email UNIQUE (Email)
+);
+
+go
+
+create table AppUserTeam (
+    AppUserTeamID INT NOT NULL IDENTITY(1,1),
+    TeamID INT NOT NULL,
+    AppUserID INT NOT NULL,
+    constraint PK_AppUserTeam Primary Key (AppUserTeamID),
+    constraint UQ_AppUserTeam UNIQUE (TeamID, AppUserID),
+    constraint FK_AppUserTeam_Team FOREIGN KEY (TeamID) REFERENCES Team(TeamID),
+    constraint FK_AppUserTeam_AppUser FOREIGN KEY (AppUserID) REFERENCES AppUser(AppUserID)
 );
 
 go 
