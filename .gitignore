@@ -1,5 +1,7 @@
 # Specific files
 /Data/SQLExperiments.sql
+/Data/PopulatingTables/load_teams.py
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
