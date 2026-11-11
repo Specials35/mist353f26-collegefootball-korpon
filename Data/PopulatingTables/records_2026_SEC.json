@@ -6,22 +6,22 @@
     "classification": "fbs",
     "conference": "SEC",
     "division": "",
-    "expectedWins": 2.773106336593628,
+    "expectedWins": 3.6153563261032104,
     "total": {
-      "games": 8,
-      "wins": 4,
+      "games": 9,
+      "wins": 5,
       "losses": 4,
       "ties": 0
     },
     "conferenceGames": {
-      "games": 6,
-      "wins": 2,
+      "games": 7,
+      "wins": 3,
       "losses": 4,
       "ties": 0
     },
     "homeGames": {
-      "games": 4,
-      "wins": 2,
+      "games": 5,
+      "wins": 3,
       "losses": 2,
       "ties": 0
     },
@@ -38,8 +38,8 @@
       "ties": 0
     },
     "regularSeason": {
-      "games": 8,
-      "wins": 4,
+      "games": 9,
+      "wins": 5,
       "losses": 4,
       "ties": 0
     },
@@ -57,17 +57,17 @@
     "classification": "fbs",
     "conference": "SEC",
     "division": "",
-    "expectedWins": 3.057375393807888,
+    "expectedWins": 3.2151254042983055,
     "total": {
-      "games": 8,
+      "games": 9,
       "wins": 3,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "conferenceGames": {
-      "games": 5,
+      "games": 6,
       "wins": 1,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "homeGames": {
@@ -77,9 +77,9 @@
       "ties": 0
     },
     "awayGames": {
-      "games": 3,
+      "games": 4,
       "wins": 1,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "neutralSiteGames": {
@@ -89,9 +89,9 @@
       "ties": 0
     },
     "regularSeason": {
-      "games": 8,
+      "games": 9,
       "wins": 3,
-      "losses": 5,
+      "losses": 6,
       "ties": 0
     },
     "postseason": {
@@ -108,23 +108,23 @@
     "classification": "fbs",
     "conference": "SEC",
     "division": "",
-    "expectedWins": 5.147856129333377,
+    "expectedWins": 5.159645516425371,
     "total": {
-      "games": 8,
+      "games": 9,
       "wins": 5,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "conferenceGames": {
-      "games": 6,
+      "games": 7,
       "wins": 3,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "homeGames": {
-      "games": 4,
+      "games": 5,
       "wins": 3,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "awayGames": {
@@ -140,9 +140,9 @@
       "ties": 0
     },
     "regularSeason": {
-      "games": 8,
+      "games": 9,
       "wins": 5,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "postseason": {
@@ -159,16 +159,16 @@
     "classification": "fbs",
     "conference": "SEC",
     "division": "",
-    "expectedWins": 6.602722674608231,
+    "expectedWins": 7.600433099083602,
     "total": {
-      "games": 8,
-      "wins": 7,
+      "games": 9,
+      "wins": 8,
       "losses": 1,
       "ties": 0
     },
     "conferenceGames": {
-      "games": 6,
-      "wins": 5,
+      "games": 7,
+      "wins": 6,
       "losses": 1,
       "ties": 0
     },
@@ -179,8 +179,8 @@
       "ties": 0
     },
     "awayGames": {
-      "games": 2,
-      "wins": 2,
+      "games": 3,
+      "wins": 3,
       "losses": 0,
       "ties": 0
     },
@@ -191,8 +191,8 @@
       "ties": 0
     },
     "regularSeason": {
-      "games": 8,
-      "wins": 7,
+      "games": 9,
+      "wins": 8,
       "losses": 1,
       "ties": 0
     },
@@ -210,17 +210,17 @@
     "classification": "fbs",
     "conference": "SEC",
     "division": "",
-    "expectedWins": 6.2311179069802165,
+    "expectedWins": 6.237576368264854,
     "total": {
-      "games": 8,
+      "games": 9,
       "wins": 7,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "conferenceGames": {
-      "games": 6,
+      "games": 7,
       "wins": 5,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "homeGames": {
@@ -230,9 +230,9 @@
       "ties": 0
     },
     "awayGames": {
-      "games": 3,
+      "games": 4,
       "wins": 3,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "neutralSiteGames": {
@@ -242,9 +242,9 @@
       "ties": 0
     },
     "regularSeason": {
-      "games": 8,
+      "games": 9,
       "wins": 7,
-      "losses": 1,
+      "losses": 2,
       "ties": 0
     },
     "postseason": {
@@ -261,23 +261,23 @@
     "classification": "fbs",
     "conference": "SEC",
     "division": "",
-    "expectedWins": 6.979473911225796,
+    "expectedWins": 6.980332012986764,
     "total": {
-      "games": 8,
+      "games": 9,
       "wins": 6,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "conferenceGames": {
-      "games": 5,
+      "games": 6,
       "wins": 3,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "homeGames": {
-      "games": 5,
+      "games": 6,
       "wins": 5,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "awayGames": {
@@ -293,9 +293,9 @@
       "ties": 0
     },
     "regularSeason": {
-      "games": 8,
+      "games": 9,
       "wins": 6,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "postseason": {
@@ -312,23 +312,23 @@
     "classification": "fbs",
     "conference": "SEC",
     "division": "",
-    "expectedWins": 6.341659559402615,
+    "expectedWins": 6.429579234216362,
     "total": {
-      "games": 8,
+      "games": 9,
       "wins": 6,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "conferenceGames": {
-      "games": 5,
+      "games": 6,
       "wins": 3,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "homeGames": {
-      "games": 4,
+      "games": 5,
       "wins": 4,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "awayGames": {
@@ -344,9 +344,9 @@
       "ties": 0
     },
     "regularSeason": {
-      "games": 8,
+      "games": 9,
       "wins": 6,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "postseason": {
@@ -363,23 +363,23 @@
     "classification": "fbs",
     "conference": "SEC",
     "division": "",
-    "expectedWins": 4.909965830622241,
+    "expectedWins": 4.912255406146869,
     "total": {
-      "games": 8,
+      "games": 9,
       "wins": 6,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "conferenceGames": {
-      "games": 6,
+      "games": 7,
       "wins": 4,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "homeGames": {
-      "games": 4,
+      "games": 5,
       "wins": 4,
-      "losses": 0,
+      "losses": 1,
       "ties": 0
     },
     "awayGames": {
@@ -395,9 +395,9 @@
       "ties": 0
     },
     "regularSeason": {
-      "games": 8,
+      "games": 9,
       "wins": 6,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "postseason": {
@@ -414,16 +414,16 @@
     "classification": "fbs",
     "conference": "SEC",
     "division": "",
-    "expectedWins": 3.8532218728214502,
+    "expectedWins": 4.841432485729456,
     "total": {
-      "games": 8,
-      "wins": 4,
+      "games": 9,
+      "wins": 5,
       "losses": 4,
       "ties": 0
     },
     "conferenceGames": {
-      "games": 5,
-      "wins": 2,
+      "games": 6,
+      "wins": 3,
       "losses": 3,
       "ties": 0
     },
@@ -434,8 +434,8 @@
       "ties": 0
     },
     "awayGames": {
-      "games": 3,
-      "wins": 1,
+      "games": 4,
+      "wins": 2,
       "losses": 2,
       "ties": 0
     },
@@ -446,8 +446,8 @@
       "ties": 0
     },
     "regularSeason": {
-      "games": 8,
-      "wins": 4,
+      "games": 9,
+      "wins": 5,
       "losses": 4,
       "ties": 0
     },
@@ -465,16 +465,16 @@
     "classification": "fbs",
     "conference": "SEC",
     "division": "",
-    "expectedWins": 3.5405885700602084,
+    "expectedWins": 4.540588570060208,
     "total": {
-      "games": 8,
-      "wins": 3,
+      "games": 9,
+      "wins": 4,
       "losses": 5,
       "ties": 0
     },
     "conferenceGames": {
-      "games": 5,
-      "wins": 0,
+      "games": 6,
+      "wins": 1,
       "losses": 5,
       "ties": 0
     },
@@ -485,8 +485,8 @@
       "ties": 0
     },
     "awayGames": {
-      "games": 3,
-      "wins": 0,
+      "games": 4,
+      "wins": 1,
       "losses": 3,
       "ties": 0
     },
@@ -497,8 +497,8 @@
       "ties": 0
     },
     "regularSeason": {
-      "games": 8,
-      "wins": 3,
+      "games": 9,
+      "wins": 4,
       "losses": 5,
       "ties": 0
     },
@@ -516,17 +516,17 @@
     "classification": "fbs",
     "conference": "SEC",
     "division": "",
-    "expectedWins": 4.10569750983268,
+    "expectedWins": 4.505833324976265,
     "total": {
-      "games": 8,
+      "games": 9,
       "wins": 4,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "conferenceGames": {
-      "games": 5,
+      "games": 6,
       "wins": 1,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "homeGames": {
@@ -536,9 +536,9 @@
       "ties": 0
     },
     "awayGames": {
-      "games": 3,
+      "games": 4,
       "wins": 0,
-      "losses": 3,
+      "losses": 4,
       "ties": 0
     },
     "neutralSiteGames": {
@@ -548,9 +548,9 @@
       "ties": 0
     },
     "regularSeason": {
-      "games": 8,
+      "games": 9,
       "wins": 4,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "postseason": {
@@ -567,16 +567,16 @@
     "classification": "fbs",
     "conference": "SEC",
     "division": "",
-    "expectedWins": 4.915673518553376,
+    "expectedWins": 5.827753843739629,
     "total": {
-      "games": 8,
-      "wins": 6,
+      "games": 9,
+      "wins": 7,
       "losses": 2,
       "ties": 0
     },
     "conferenceGames": {
-      "games": 5,
-      "wins": 3,
+      "games": 6,
+      "wins": 4,
       "losses": 2,
       "ties": 0
     },
@@ -587,8 +587,8 @@
       "ties": 0
     },
     "awayGames": {
-      "games": 1,
-      "wins": 1,
+      "games": 2,
+      "wins": 2,
       "losses": 0,
       "ties": 0
     },
@@ -599,8 +599,8 @@
       "ties": 0
     },
     "regularSeason": {
-      "games": 8,
-      "wins": 6,
+      "games": 9,
+      "wins": 7,
       "losses": 2,
       "ties": 0
     },
@@ -618,16 +618,16 @@
     "classification": "fbs",
     "conference": "SEC",
     "division": "",
-    "expectedWins": 6.309857248328626,
+    "expectedWins": 7.308999146567658,
     "total": {
-      "games": 8,
-      "wins": 6,
+      "games": 9,
+      "wins": 7,
       "losses": 2,
       "ties": 0
     },
     "conferenceGames": {
-      "games": 6,
-      "wins": 4,
+      "games": 7,
+      "wins": 5,
       "losses": 2,
       "ties": 0
     },
@@ -638,8 +638,8 @@
       "ties": 0
     },
     "awayGames": {
-      "games": 3,
-      "wins": 2,
+      "games": 4,
+      "wins": 3,
       "losses": 1,
       "ties": 0
     },
@@ -650,8 +650,8 @@
       "ties": 0
     },
     "regularSeason": {
-      "games": 8,
-      "wins": 6,
+      "games": 9,
+      "wins": 7,
       "losses": 2,
       "ties": 0
     },
@@ -671,21 +671,21 @@
     "division": "",
     "expectedWins": 3.4631916536018252,
     "total": {
-      "games": 8,
+      "games": 9,
       "wins": 4,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "conferenceGames": {
-      "games": 6,
+      "games": 7,
       "wins": 2,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "homeGames": {
-      "games": 4,
+      "games": 5,
       "wins": 2,
-      "losses": 2,
+      "losses": 3,
       "ties": 0
     },
     "awayGames": {
@@ -701,9 +701,9 @@
       "ties": 0
     },
     "regularSeason": {
-      "games": 8,
+      "games": 9,
       "wins": 4,
-      "losses": 4,
+      "losses": 5,
       "ties": 0
     },
     "postseason": {
@@ -720,22 +720,22 @@
     "classification": "fbs",
     "conference": "SEC",
     "division": "",
-    "expectedWins": 4.736672660335898,
+    "expectedWins": 5.336536845192313,
     "total": {
-      "games": 8,
-      "wins": 5,
+      "games": 9,
+      "wins": 6,
       "losses": 3,
       "ties": 0
     },
     "conferenceGames": {
-      "games": 6,
-      "wins": 3,
+      "games": 7,
+      "wins": 4,
       "losses": 3,
       "ties": 0
     },
     "homeGames": {
-      "games": 5,
-      "wins": 3,
+      "games": 6,
+      "wins": 4,
       "losses": 2,
       "ties": 0
     },
@@ -752,8 +752,8 @@
       "ties": 0
     },
     "regularSeason": {
-      "games": 8,
-      "wins": 5,
+      "games": 9,
+      "wins": 6,
       "losses": 3,
       "ties": 0
     },
@@ -771,22 +771,22 @@
     "classification": "fbs",
     "conference": "SEC",
     "division": "",
-    "expectedWins": 6.396338606253266,
+    "expectedWins": 7.389880144968629,
     "total": {
-      "games": 8,
-      "wins": 6,
+      "games": 9,
+      "wins": 7,
       "losses": 2,
       "ties": 0
     },
     "conferenceGames": {
-      "games": 5,
-      "wins": 3,
+      "games": 6,
+      "wins": 4,
       "losses": 2,
       "ties": 0
     },
     "homeGames": {
-      "games": 5,
-      "wins": 4,
+      "games": 6,
+      "wins": 5,
       "losses": 1,
       "ties": 0
     },
@@ -803,8 +803,8 @@
       "ties": 0
     },
     "regularSeason": {
-      "games": 8,
-      "wins": 6,
+      "games": 9,
+      "wins": 7,
       "losses": 2,
       "ties": 0
     },
